@@ -2,7 +2,7 @@
 
 [Dreeve](https://github.com/dreeveapp/dreeve) (formerly Statistics for Strava, AGPL-3.0): a self-hosted dashboard for your sports and fitness data (.fit/.gpx/.tcx files, optional Strava API) with a read-only MCP server. Deploy it on Railway with one click.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/CODE)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/jQDFaQ)
 
 ## What this template runs
 - **dreeve**: `ghcr.io/onepush-dev/dreeve:v5.9.1`, the official `ghcr.io/dreeveapp/dreeve:v5.9.1` image (application unmodified). Upstream runs a web container and a daemon container that share volumes; Railway cannot share a volume, so this wrapper runs `bin/console app:daemon:run` next to FrankenPHP in one service. One volume at `/var/www/storage` holds the SQLite database, activity files, the watch folder and backups. Import mode is `files` (no Strava account needed).
